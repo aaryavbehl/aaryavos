@@ -137,6 +137,7 @@ body, html {
     position: absolute;
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.125);
+    font-family: 'Helvetica', sans-serif;
   }
 
   .windowheader {
@@ -153,3 +154,16 @@ body, html {
     color: #fff;
     font-weight: 500
   }
+
+
+  .glow-on-hover {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
+  }
+
+  .glow-on-hover.selected {
+    border: 2px solid blue; /* Customize the selected border color and width */
+}
