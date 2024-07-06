@@ -1,82 +1,6 @@
-label {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 10px 15px 10px 10px;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    color: black;
-   }
-   
-   input {
-    display: none;
-   }
-   
-   input:checked + label svg {
-    fill: hsl(0deg 100% 50%);
-    stroke: hsl(0deg 100% 50%);
-    animation: heartButton 1s;
-   }
-   
-   @keyframes heartButton {
-    0% {
-     transform: scale(1);
-    }
-   
-    25% {
-     transform: scale(1.3);
-    }
-   
-    50% {
-     transform: scale(1);
-    }
-   
-    75% {
-     transform: scale(1.3);
-    }
-   
-    100% {
-     transform: scale(1);
-    }
-   }
-   
-   input + label .action {
-    position: relative;
-    overflow: hidden;
-    display: grid;
-   }
-   
-   input + label .action span {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    transition: all .5s;
-   }
-   
-   input + label .action span.option-1 {
-    transform: translate(0px,0%);
-    opacity: 1;
-   }
-   
-   input:checked + label .action span.option-1 {
-    transform: translate(0px,-100%);
-    opacity: 0;
-   }
-   
-   input + label .action span.option-2 {
-    transform: translate(0px,100%);
-    opacity: 0;
-   }
-   
-   input:checked + label .action span.option-2 {
-    transform: translate(0px,0%);
-    opacity: 1;
-   }
 
+
+   /* Live wallpaper config */ 
    #video-background {
     position: fixed;
     top: 0;
@@ -86,15 +10,14 @@ label {
     overflow: hidden;
     z-index: -1;
 }
-
-/* CSS styles for the video element */
 #video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire container */
+    object-fit: cover;
 }
+/* Live wallpaper config */
 
-/* Additional styles for other content */
+/* root config */
 .content {
     position: relative;
     z-index: 1;
@@ -109,6 +32,9 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
+/* root config */
+
+/* window class config */
 #window {
     border: solid;
     width: 50%;
@@ -119,17 +45,7 @@ body, html {
     transform: translate(-50%, -50%);
 }
 
-.closebutton {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    background-color: #EC6B5E;
-    border-radius: 16px;
-    border: solid 1px rgba(0, 0, 0, 0.25);
-    margin-left: 6px;
-  }
-
-  .window {
+.window {
     border: solid;
     display: flex;
     flex-direction: column;
@@ -148,14 +64,30 @@ body, html {
     justify-content: space-between;
     margin-top: 8px;
   }
-  
+/* window class config */
+
+/* closebutton class config */
+.closebutton {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-color: #EC6B5E;
+    border-radius: 16px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    margin-left: 6px;
+  }
+/* closebutton class config */
+
+
+  /* header config config */
   .headertext {
     margin: 0px;
     color: #fff;
     font-weight: 500
   }
+    /* header config config */
 
-
+/* glow + select border config */   
   .glow-on-hover {
     transition: box-shadow 0.3s ease-in-out;
   }
@@ -165,5 +97,6 @@ body, html {
   }
 
   .glow-on-hover.selected {
-    border: 2px solid blue; /* Customize the selected border color and width */
+    border: 2px solid blue; 
 }
+/* glow + select border config */ 

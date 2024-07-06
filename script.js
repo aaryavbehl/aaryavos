@@ -77,12 +77,13 @@ var notesScreenOpen = document.querySelector("#noteopen")
 notesScreenOpen.addEventListener("click", function() {
   openWindow(notesScreen);
   });
-  document.getElementById('noteopen').addEventListener('click', function() {
-    this.classList.toggle('selected');
-});
 /////////////////OPEN AND CLOSE MECHANISM FOR NOTES SCREEN////////////////////////////////////////////////////////////////////////
 
-
+/////////////////////////ADD THE ELEMENTS IN WHICH BORDERS ARE NEEDED////////////////////////////////////////////////////////////
+document.getElementById('noteopen').addEventListener('click', function() {
+  this.classList.toggle('selected');
+});
+/////////////////////////ADD THE ELEMENTS IN WHICH BORDERS ARE NEEDED////////////////////////////////////////////////////////////
 
 
 
