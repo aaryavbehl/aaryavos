@@ -143,29 +143,10 @@
     setDate();
 
 
-    function sendSMS(messageBody) {
-      const accountSid = 'AC9577eec75abf5558561b6195bd6add94';
-      const authToken = '424412b787024b505738f6703a158d50';
-      const fromPhoneNumber = '+18336100199';
-      const toPhoneNumber = '+18643843747';
 
-      fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Basic ${btoa(`${accountSid}:${authToken}`)}`,
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams({
-          From: fromPhoneNumber,
-          To: toPhoneNumber,
-          Body: messageBody
-        })
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-    }
 
+
+       
           // Initialize the map
           var map = L.map('map').fitWorld().zoomIn(1);
 
