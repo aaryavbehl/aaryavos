@@ -83,6 +83,18 @@
         src="assets/maps.gif" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Maps</p>
     </div>
+    <div id="KrunkerIcon" onclick="openIcon('krunker')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="assets/krunker.gif" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Krunker</p>
+    </div>
+    <div id="DeblotubeIcon" onclick="openIcon('deblotube')"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="assets/youtube.gif" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">YouTube</p>
+    </div>
   </div>
 <!--------Home Screen Icons------> 
 
@@ -150,11 +162,11 @@
   <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 512px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="projectshandle"
-      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
       <div onclick="closeElement(document.getElementById('projects'))"
         style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
       </div>
-      <p>Projects</p>
+      <p style="color: white;">Projects</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
     </div>
 
@@ -164,219 +176,81 @@
       <script>
         const icons = [
           {
-            id: "mealPackIcon",
-            imgSrc: "https://cloud-r2bo1086a-hack-club-bot.vercel.app/0mealpack.png",
-            title: "Meal Pack",
-            description: "This is a project I built for my mom. It's a tool for creating, storing, and sharing recipes.",
+            id: "PortfolioWebsiteIcon",
+            imgSrc: "/assets/portfoliowebsiteicon.gif",
+            title: "Portfolio Website",
+            description: "This is a portfolio website which I made a while ago.",
             links: [
               {
-                title: "Video Demo",
-                url: "https://youtu.be/g29MwYE3F7g"
-              },
-              {
-                title: "Project URL",
-                url: "https://mealpack.app/"
+                title: "Portfolio Website",
+                url: "https://aaryav.netlify.app/"
               }
             ]
           },
           {
-            id: "givingGiraffeMeIcon",
-            imgSrc: "https://cloud-n8xlb3i7m-hack-club-bot.vercel.app/0givinggiraffee.png",
-            title: "Giving Giraffe",
-            description: "Created at a hackathon with friends. It's a fun tool that lets users customize 3D flower bouquets and send them to friends.",
+            id: "BlogIcon",
+            imgSrc: "/assets/blog.gif",
+            title: "Blog Website",
+            description: "A blog website which I built.",
             links: [
               {
-                title: "Video Demo",
-                url: "https://youtu.be/SJQgZk3LrXk"
-              },
-              {
-                title: "Project URL",
-                url: "giving-giraffe.vercel.app"
-              },
-              {
-                title: "DevPost Listing",
-                url: "https://devpost.com/software/giving-giraffe"
+                title: "Blog Website",
+                url: "https://aaryavblog.vercel.app/"
               }
             ]
           },
-          {
-            id: "coconutIcon",
-            imgSrc: "https://cloud-cvuf7zw5n-hack-club-bot.vercel.app/0coconuticon.png",
-            title: "Coconut",
-            description: "Built this at Epoch with some colleagues. It's an AI-powered tool for generating personalized pickup lines.",
-            links: [
-              {
-                title: "Project URL",
-                url: "https://coconut-eight.vercel.app/"
-              },
-              {
-                title: "GitHub Repo",
-                url: "https://github.com/SerenityUX/coconut"
-              }
-            ]
-          },
-          {
-            id: "dormanIcon",
-            imgSrc: "https://cloud-86lg561zb-hack-club-bot.vercel.app/0dormanhackclub.png",
-            title: "Dorman Hack Club",
-            description: "Started with a friend as the only programming club at our school. We host various workshops, and the club is still active after our graduation.",
-            links: []
-          },
-          {
-            id: "auroraIcon",
-            imgSrc: "https://cloud-m8uitkxlz-hack-club-bot.vercel.app/0aurora.png",
-            title: "Aurora",
-            description: "A weather SMS tool I worked on with Matt. It sends daily weather updates and even suggests what to wear.",
-            links: [
-              {
-                title: "Project URL",
-                url: "https://www.auroraalert.cc/"
-              }
-            ]
-          },
-          {
-            id: "penguinPairIcon",
-            imgSrc: "https://cloud-7k5mnxpyi-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_12.48.15_pm.png",
-            title: "Penguin Pair",
-            description: "This is a game created over a weekend with my friend Dieter. Check it out, it's fun and currently available only on iOS.",
-            links: [
-              {
-                title: "App Store Download",
-                url: "https://apps.apple.com/us/app/penguin-pair-cards/id6446442403"
-              }
-            ]
-          },
-          {
-            id: "telegradeIcon",
-            imgSrc: "https://cloud-dytdcke80-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_12.54.25_pm.png",
-            title: "Telegrade",
-            description: "An app built with Dieter aimed at helping small businesses grow their social media presence.",
-            links: [
-              {
-                title: "App Store Download",
-                url: "https://apps.apple.com/us/app/telegrade/id1667140470"
-              }
-            ]
-          },
-          {
-            id: "serenidadIcon",
-            imgSrc: "https://cloud-1rd9210b7-hack-club-bot.vercel.app/0image.png",
-            title: "Serenidad Podcast",
-            description: "This is a bit of a secret project, but feel free to check it out. It already has over 80 episodes.",
-            links: [
-              {
-                title: "Spotify Link",
-                url: "https://open.spotify.com/show/7LW5340gHWfr7nbH0PehTL"
-              }
-            ]
-          },
-          {
-            id: "bikeIcon",
-            imgSrc: "https://cloud-7vio1pyee-hack-club-bot.vercel.app/0bikeapp.png",
-            title: "Bike App UI",
-            description: "I built the UI for a fictional bike shop as part of the Google UX Design Specialization.",
-            links: [
-              {
-                title: "Figma Prototype",
-                url: "https://www.figma.com/proto/2JjWx4iCsGnos1JUI4gW3c/Proper-Bike-App?page-id=0%3A1&type=design&node-id=24-347&viewport=-68%2C-486%2C0.21&scaling=scale-down&starting-point-node-id=24%3A347&show-proto-sidebar=1"
-              }
-            ]
-          },
-          {
-            id: "wireUsIcon",
-            imgSrc: "https://cloud-1f5hszzzt-hack-club-bot.vercel.app/0wireus.png",
-            title: "WireUs",
-            description: "My first introduction to software design. I helped with the UI design for this coding challenge platform in collaboration with Pooja Gera (the creator of the project).",
-            links: [
-              {
-                title: "Figma File",
-                url: "https://www.figma.com/file/nPgIxuGC3bGYo5uvIKlCot/Untitled-(Copy)?type=design&node-id=0%3A1&t=yw2Qjv0iMpbEc0FK-1"
-              },
-              {
-                title: "WireUs Twitter",
-                url: "https://twitter.com/wireus2020?lang=en"
-              }
-            ]
-          },
-          {
-            id: "carolinaHacks",
-            imgSrc: "https://cloud-8bqyah0fq-hack-club-bot.vercel.app/0carolinahacks.png",
-            title: "Carolina Hacks",
-            description: "The first student-led hackathon in South Carolina. I organized this event with my friend Dieter.",
-            links: [
-              {
-                title: "Website",
-                url: "https://www.carolinahacks.com/"
-              },
-              {
-                title: "Carolina Hacks Documentary",
-                url: "https://drive.google.com/file/d/1gOpYcsQk7mf2ETHbtHarUdKUDJAMFL-w/view?usp=sharing"
-              }
-            ]
-          },
-          {
-            id: "clubsDirectory",
-            imgSrc: "https://cloud-16a0ql3nr-hack-club-bot.vercel.app/0screenshot_2023-06-09_at_1.12.46_pm.png",
-            title: "Clubs Directory",
-            description: "This is a directory of clubs that I created. It's a handy tool for finding clubs and seeing what they're all about.",
-            links: [
-              {
-                title: "Directory Site",
-                url: "https://directory.hackclub.com/"
-              }
-            ]
-          }
+
         ];
 
         const iconContainer = document.getElementById('icon-container');
 
         icons.forEach(icon => {
-          const divWrapper = document.createElement('div');
-          const divHeading = document.createElement('div');
+    const divWrapper = document.createElement('div');
+    const divIcon = document.createElement('div');
+    const divHeading = document.createElement('div');
+    const img = document.createElement('img');
+    const p = document.createElement('p');
+    const description = document.createElement('p');
+    const linksContainer = document.createElement('div'); // Container for links/buttons
 
-          const divIcon = document.createElement('div');
-          const img = document.createElement('img');
-          const p = document.createElement('p');
-          const description = document.createElement('p');
-          const linksContainer = document.createElement('div'); // Container for links/buttons
+    divWrapper.style.cssText = "align-items: center; background-color: #F6F6F6; border-radius: 16px; margin-bottom: 16px; padding: 16px; display: flex; flex-direction: column;";
+    divIcon.style.cssText = "display: flex; flex-direction: column; align-items: center;"; // Adjust to center items vertically
+    img.style.cssText = "height: 48px; width: 48px; border-radius: 16px; margin: 0px;";
+    p.style.cssText = "margin: 0px; padding: 0px; font-size: 16px; margin-top: 8px; font-weight: 500; color: #000;";
+    description.style.cssText = "margin-top: 8px; margin-bottom: 0px; text-align: center;"; // Adjust alignment of description
+    linksContainer.style.cssText = "display: flex; gap: 8px; align-items: center; justify-content: center; width: 100%; margin-top: 8px;";
 
-          divHeading.style.cssText = "display: flex; flex-direction: row; align-items: center; gap: 8px;";
+    img.src = icon.imgSrc;
+    p.textContent = icon.title;
+    description.textContent = icon.description;
 
-          divWrapper.style.cssText = "align-items: center; background-color: #F6F6F6; border-radius: 16px; margin-bottom: 16px; padding: 16px; display: flex; flex-direction: column;";
-          img.style.cssText = "height: 48px; width: 48px; border-radius: 16px; margin: 0px;";
-          p.style.cssText = "margin: 0px; padding: 0px; font-size: 16px; margin-top: 4px; font-weight: 500; color: #000;";
-          description.style.cssText = "margin-top: 8px; margin-bottom: 0px;";
-          linksContainer.style.cssText = "display: flex; gap: 8px; align-items: left; justify-content: start; width: 100%; margin-top: 8px;";
+    divHeading.appendChild(img);
+    divHeading.appendChild(p);
+    divIcon.appendChild(divHeading); // Append heading to the icon container
+    divIcon.appendChild(description); // Append description directly after heading
 
-          divIcon.id = icon.id;
-          img.src = icon.imgSrc;
-          p.textContent = icon.title;
-          description.textContent = icon.description;
+    divWrapper.appendChild(divIcon);
+    divWrapper.appendChild(linksContainer); // Append links container to the wrapper
 
-          divHeading.appendChild(img);
-          divHeading.appendChild(p);
-          divIcon.appendChild(divHeading);
+    icon.links.forEach(link => {
+        const linkButton = document.createElement('a');
+        linkButton.href = link.url;
+        linkButton.textContent = link.title;
+        linkButton.style.cssText = "display: inline-block; padding: 6px 12px; background-color: #4E75FF; color: #fff; border-radius: 16px; text-decoration: none;";
 
-          divIcon.appendChild(description);
+        linksContainer.appendChild(linkButton); // Append link button to the links container
+    });
 
-          divWrapper.appendChild(divIcon);
-          divWrapper.appendChild(linksContainer); // Append links container to the wrapper
-
-          icon.links.forEach(link => {
-            const linkButton = document.createElement('a');
-            linkButton.href = link.url;
-            linkButton.textContent = link.title;
-            linkButton.style.cssText = "display: inline-block; padding: 6px 12px; background-color: #4E75FF; color: #fff; border-radius: 16px; text-decoration: none;";
-
-            linksContainer.appendChild(linkButton); // Append link button to the links container
-          });
-
-          iconContainer.appendChild(divWrapper);
-        });
+    iconContainer.appendChild(divWrapper);
+});
 
 
       </script>
-
+      <p>More projects on:</p>
+      <a href="https://www.linkedin.com/in/aaryavbehl/" style="color: #1100ff; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">LinkedIn</a>
+      <a href="https://www.youtube.com/@aaryavtech" style="color: #ff0000; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">YouTube</a>
+      <a href="https://www.instagram.com/aaryavbehl" style="color: #91025a; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Instagram</a>
+      <a href="https://github.com/aaryavbehl/" style="color: #000000; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">GitHub</a>
     </div>
   </div>
 <!--------Projects App------> 
@@ -411,19 +285,44 @@
         </br>
         Occasionally, I upload my projects on my social media, so check there as well because I might be more active there. :)
       </p>
-      <a href="https://www.example.com">Link text</a>
-      <a href="https://www.example.com">Link text</a>
-      <a href="https://www.example.com">Link text</a>
+      <a href="https://www.linkedin.com/in/aaryavbehl/" style="color: #1100ff; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">LinkedIn</a>
+      <a href="https://www.youtube.com/@aaryavtech" style="color: #ff0000; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">YouTube</a>
+      <a href="https://www.instagram.com/aaryavbehl" style="color: #91025a; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Instagram</a>
+      <a href="https://github.com/aaryavbehl/" style="color: #000000; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">GitHub</a>
     </div>
   </div>
 <!--------About me App------> 
 
 
+<!--------Krunker------> 
+<div id="krunker" onclick="tapWindow(document.getElementById('krunker'))"
+style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fbfbfb; width: auto; position: absolute; justify-content: center; flex-direction: column; display: none">
+<div id="krunkerhandle"
+  style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+  <div onclick="closeElement(document.getElementById('krunker'))"
+    style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+  </div>
+  <p style="color: white">KRUNKER</p>
+  <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+</div>
+<iframe src="https://krunker.io" width="1200" height="600" frameborder="0"></iframe>
+</div>
+<!--------Krunker------> 
 
-
-
-
-
+<!--------Deblotube------> 
+<div id="deblotube" onclick="tapWindow(document.getElementById('deblotube'))"
+style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fbfbfb; width: auto; position: absolute; justify-content: center; flex-direction: column; display: none">
+<div id="deblotubehandle"
+  style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+  <div onclick="closeElement(document.getElementById('deblotube'))"
+    style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
+  </div>
+  <p style="color: white">Deblotube</p>
+  <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+</div>
+<iframe src="https://deblotube.netlify.app" width="1200" height="600" frameborder="0"></iframe>
+</div>
+<!--------Deblotube------>
 
   <!-----------------------------------------------------------------------------------------------------------------APPLICATIONS------> 
 
