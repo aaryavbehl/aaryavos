@@ -1,21 +1,15 @@
     var selectedIcon = null
     var topIndex = 3
+
+    ////////////////MESSAGE BACKEND////////////////////////
     var awaitingResponse = false
     function sendMessage() {
       if (!awaitingResponse) {
         var messageContent = document.getElementById("messageInput").value
-        // Create a new <p> element
         var paragraph = document.createElement('p');
-
-        // Set the text content of the <p> element
         paragraph.textContent = messageContent
-
-
-        // Find the target div by its ID
         var targetDiv = document.getElementById('chat');
         paragraph.classList.add("my_message")
-
-        // Append the <p> element to the target div
         targetDiv.appendChild(paragraph);
         awaitingResponse = true
         sendSMS(messageContent)
@@ -24,7 +18,11 @@
       }
 
     }
-    function toggleMusic() {
+////////////////MESSAGE BACKEND////////////////////////
+
+
+////////////////MUSIC TOGGLE BACKEND////////////////////////
+     function toggleMusic() {
       var video = document.getElementById("videoElement");
       var musicToggle = document.getElementById("musicToggle");
 
@@ -39,11 +37,14 @@
         musicToggle.textContent = "Play Music";
       }
     }
+////////////////MUSIC TOGGLE BACKEND////////////////////////
 
 
 
 
-    function tapWindow(elmnt) {
+
+///////////////////////////////////Interaction with the apps/////////////////////////////////////////////////////
+function tapWindow(elmnt) {
       elmnt.style.zIndex = topIndex++;
     }
 
@@ -79,7 +80,7 @@
       elmnt.style.display = 'none'
     }
 
-    // Make the DIV element draggable:
+
     dragElement(document.getElementById("welcome"));
 
     function dragElement(elmnt) {
@@ -91,10 +92,13 @@
         // otherwise, move the DIV from anywhere inside the DIV:
         elmnt.onmousedown = dragMouseDown;
       }
+///////////////////////////////////Interaction with the apps/////////////////////////////////////////////////////
 
+
+////////////////////////////////////////Getting age backend///////////////////////////////////////////////////////
       function getAge() {
         const currentDate = new Date();
-        const targetDate = new Date("2004-09-28"); // Replace with your target date in the format "YYYY-MM-DD"
+        const targetDate = new Date("2006-11-30"); // Replace with your target date in the format "YYYY-MM-DD"
         const differenceMs = currentDate - targetDate;
         const millisecondsPerYear = 365.25 * 24 * 60 * 60 * 1000;
         const yearsWithDecimals = (differenceMs / millisecondsPerYear).toFixed(5);
@@ -112,7 +116,10 @@
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
       }
+////////////////////////////////////////Getting age backend///////////////////////////////////////////////////////
 
+
+/////////////////////////////////////DRAG BACKEND/////////////////////////////////////
       function elementDrag(e) {
         e = e || window.event;
         e.preventDefault();
@@ -134,6 +141,10 @@
         document.onmousemove = null;
       }
     }
+/////////////////////////////////////DRAG BACKEND/////////////////////////////////////   
+
+
+/////////////////////////////DATE AND TIME BACKEND///////////////////////////////////////////  
     function setDate() {
       var timeElement = document.getElementById("time");
       timeElement.innerText = new Date().toLocaleString();
@@ -141,35 +152,33 @@
     }
 
     setDate();
+/////////////////////////////DATE AND TIME BACKEND///////////////////////////////////////////
 
 
 
 
-
-       
-          // Initialize the map
+/////////////////////////////MAP BACKEND//////////////////////////////////////////////////////      
           var map = L.map('map').fitWorld().zoomIn(1);
 
-          // Add the tile layer
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
           }).addTo(map);
     
-          // Add a marker
+          
           function createCustomMarker(latitude, longitude, imageURL, caption) {
-            // Create a custom DivIcon
+            
             var customIcon = L.divIcon({
               className: 'custom-marker-icon',
               html: '<div style="position: relative;">' +
                 '<img style="height: 24px; width: 24px; border: 2px solid red; position: relative; border-radius: 16px; object-fit: cover;left: -4px; z-index: 1" src="' + imageURL + '" class="marker-image-bottom">' +
-                // '<img style="height: 48px; width: 48px; position: relative; bottom: 0; right: 16px;" src="https://cloud-jdx6xxsfn-hack-club-bot.vercel.app/0droppoint.png" class="marker-image">' +
+                
                 '</div>'
             });
     
-            // Create a marker with the custom icon
+            
             var marker = L.marker([latitude, longitude], {icon: customIcon});
     
-            // Create a custom popup
+        
             var popupContent = '<div style="text-align: center;">' +
               '<img style="max-height: 126px; border-radius: 16px; object-fit: cover;" src="' + imageURL + '">' +
               `<p style="margin: 2px 0; text-align: left;">${caption}</p>` +
@@ -186,3 +195,4 @@
           createCustomMarker(42.3601, -71.0589, 'https://cloud-eakdz9j3y-hack-club-bot.vercel.app/0image.png', 'I really enjoyed Angel Hacks. At Angel Hacks, we built an AI college admissions simulator, funded by Elon Musk. It is free, but students give 10 % of lifetime income.It also costs the user $250, 000 for every student they accept <br/> <br/>Checkout the <a href="https://youtu.be/KLx4NZZPzMc"> Angel Hacks Documentary</a> ');
     
           marker.addTo(map);
+/////////////////////////////MAP BACKEND//////////////////////////////////////////////////////  

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -12,13 +11,12 @@
       height: 400px;
     }
   </style>
-
 </head>
 
 <body>
-
- <header style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0;">
-  
+<header style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: Helvetica, Arial, sans-serif; margin: 0;">
+ 
+ <!--------Live Wallpaper------> 
   <div id="video-background">
     <video autoplay muted loop>
 
@@ -27,65 +25,71 @@
         Your browser does not support the video tag.
     </video>
 </div>
+<!--------Live Wallpaper------> 
 
-
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
+<!--------Music Toggle Video Playback------> 
+  <div>
     <video id="videoElement" autoplay muted loop
       style="position: absolute; top: 0; opacity: 0.5; left: 0; display: none; width: 100%; filter: brightness(100%) blur(4px) contrast(90%); height: 100%; z-index: -1; object-fit: cover;">
-      <source src=""
+      <source src="assets/music.mp4"
         type="video/mp4">
     </video>
   </div>
+<!--------Music Toggle Video Playback------> 
 
-
-  <div style="position: absolute; width: 100%;  height: 40px; top: 0; display: flex; justify-content: space-between; z-index: 2000; align-items: center; background-color: #00000030; color: #fff
+<!--------Top Bar Config------> 
+  <div style="position: absolute; width: 100%;  height: 40px; top: 0; display: flex; justify-content: space-between; z-index: 1; align-items: center; background-color: #00000030; color: #fff
     ; margin: 0; pointer-events: none;">
     <p style="margin-left: 16px; font-weight: 600;">
       Aaryav<span class="fade-effect">OS</span>
   </p>
     <div style="display: flex; flex-direction: row; align-items: center;">
       <p onclick="toggleMusic()"
-        style="pointer-events: auto; cursor: pointer; padding: 4px 12px; background-color: rgba(255, 255, 255, 0.1); pointer; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.0); border: 1px solid transparent; transition: box-shadow 0.3s ease; border-radius: 16px;"
+        style="pointer-events: auto; cursor: pointer; padding: 4px 12px; background-color: rgba(255, 255, 255, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.0); border: 1px solid transparent; transition: box-shadow 0.3s ease; border-radius: 16px;"
         id="musicToggle" onmouseover="this.style.boxShadow = 'inset 0 0 0 1px rgba(255, 255, 255, 0.5)'"
         onmouseout="this.style.boxShadow = 'none'">
         Play Music
       </p>
-
-
       <p id="time" style="margin-right: 16px; margin-left: 16px"></p>
     </div>
+<!--------Top Bar Config------> 
 
+<!--------Home Screen Icons------> 
   </div>
   <div id="winowApplications"
     style="height: calc(100% - 128px); width: 100%; z-index: 1; display: flex; padding: 16px; flex-direction: column;">
     <div id="contactIcon" onclick="openIcon('contact')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
-        src="https://cloud-4y56og6dg-hack-club-bot.vercel.app/0purplecontact.png" />
+        src="assets/contact.gif" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Contact</p>
     </div>
     <div id="aboutMeIcon" onclick="openIcon('aboutMe')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
-        src="https://cloud-adbpuuwa9-hack-club-bot.vercel.app/0appicon2.png" />
+        src="assets/aboutme.gif" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">aboutMe.txt</p>
     </div>
 
     <div id="projectsIcon" onclick="openIcon('projects')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
-        src="https://cloud-jq9w3zppp-hack-club-bot.vercel.app/0greatercontrast.png" />
+        src="assets/projects.gif" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Projects</p>
     </div>
     <div id="mapsIcon" onclick="openIcon('maps')"
       style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
       <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
-        src="https://cloud-2jokm3zza-hack-club-bot.vercel.app/0frameokay.png" />
+        src="assets/maps.gif" />
       <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Maps</p>
     </div>
   </div>
+<!--------Home Screen Icons------> 
+
+<!-----------------------------------------------------------------------------------------------------------------APPLICATIONS------> 
 
 
+<!--------Maps App------> 
   <div id="maps" onclick="tapWindow(document.getElementById('maps'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; overflow: hidden; width: 750px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="mapshandle"
@@ -95,8 +99,6 @@
       </div>
       <p>Maps</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
-
-
     </div>
     <div style="width: 100%; height: 400px;">
       <div id="map"></div>
@@ -104,7 +106,9 @@
     </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </div>
+ <!--------Maps App------> 
 
+<!--------Contact App------> 
   <div id="contact" onclick="tapWindow(document.getElementById('contact'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="contacthandle"
@@ -130,7 +134,6 @@
           purposes)
         </p>
       </div>
-
       <div
         style="flex-direction: row; align-items: center; margin-bottom: 16px; justify-content: space-between; display: flex;">
         <input type="text" id="messageInput" onchange="awaitingResponse = false"
@@ -141,10 +144,11 @@
 
         </div>
       </div>
-
     </div>
   </div>
+<!--------Contact App------> 
 
+<!--------Projects App------> 
   <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 512px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="projectshandle"
@@ -160,7 +164,6 @@
       style="display: grid; max-height: 600px; padding-left: 16px; padding-right: 16px; padding-top: 16px; padding-bottom: 16px; overflow-y: scroll; grid-template-columns: repeat(1, 1fr); gap: 0px;">
 
       <script>
-        // Your array of objects
         const icons = [
           {
             id: "mealPackIcon",
@@ -327,8 +330,6 @@
           }
         ];
 
-
-
         const iconContainer = document.getElementById('icon-container');
 
         icons.forEach(icon => {
@@ -380,8 +381,9 @@
 
     </div>
   </div>
+<!--------Projects App------> 
 
-
+<!--------About me App------> 
   <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="aboutMehandle"
@@ -421,31 +423,45 @@
       </p>
     </div>
   </div>
+<!--------About me App------> 
+
+
+
+
+
+
+
+
+  <!-----------------------------------------------------------------------------------------------------------------APPLICATIONS------> 
+
+
+  <!--------Welcome Page------> 
   <div id="welcome" onclick="tapWindow(document.getElementById('welcome'))"
-    style="justify-content: center; align-items: center; display: flex; flex-direction: column; border: 1px solid black; padding: 16px; border-radius: 16px; background-color: #fff; position: absolute; z-index: 1;">
-    <div style="justify-content: start; display: flex; align-items: left; width: 100%">
+    style="justify-content: center; align-items: center; display: flex; flex-direction: column; border: 1px solid black; padding: 16px; border-radius: 16px; background-image: url(assets/welcomebackground.gif); position: absolute; z-index: 1;">
+    <div style=" display: flex; align-items: left; margin: 0px; width: 300px;">
 
     </div>
     <img style="height: 96px; width: 96px; border-radius: 64px; object-fit: cover;"
-      src="assets/boot.gif" />
+      src="assets/boot.gif">
     <div style="margin: 8;  text-align: center;">
-      <h1>Aaryav<span class="fade-black-cyan">OS</span></h1>
-      <p style="text-align: center; margin: 0">
-        An Operating System dedicated to Capybaras
+      <h1 style="color: white;">Aaryav<span class="fade-black-cyan">OS</span></h1>
+      <p style="text-align: center; margin: 0; font-weight: bold; color: rgb(0, 0, 0);">
+        A web-based Operating System
         <br />
-        developed by Thomas
-      </p>
+        built by Aaryav Behl.
+    </p>
       <div style="width: 100%; justify-content: center; display: flex; align-items: center;">
         <p onclick="closeElement(document.getElementById('welcome'))"
-          style="text-align: center; width: fit-content; padding: 8px 16px; border-radius: 24px; color: blue; cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s ease; margin-bottom: 0px;"
-          onmouseover="this.style.borderColor = 'blue';" onmouseout="this.style.borderColor = 'transparent';">
-          Make go away
+          style="text-align: center; width: fit-content; padding: 8px 16px; border-radius: 24px; color: rgb(255, 0, 0); cursor: pointer; border: 1px solid transparent; transition: border-color 0.3s ease; margin-bottom: 0px; font-weight: bolder;"
+          onmouseover="this.style.borderColor = 'red';" onmouseout="this.style.borderColor = 'transparent';">
+          CLOSE
         </p>
       </div>
 
     </div>
 
   </div>
+<!--------Welcome Page------> 
   <script>
 
 

@@ -1,3 +1,4 @@
+/* Live wallpaper config */
 #video-background {
   position: fixed;
   top: 0;
@@ -12,14 +13,16 @@
   height: 100%;
   object-fit: cover;
 }
+/* Live wallpaper config */
 
+/* Root config */
 body, html {
   margin: 0px;
   padding: 0;
   height: 100%;
   overflow: hidden;
 }
-
+/* Root config */
 
 .thomas_message {
   background-color: #F6F6F6;
@@ -39,13 +42,11 @@ body, html {
   margin-left: auto;
 }
 
-
-
-
 a {
   text-decoration: none;
 }
 
+/* Key Framing Animations config */
 @keyframes fade {
   0% {
       color: cyan;
@@ -64,16 +65,17 @@ a {
 
 @keyframes colorFade {
   0% {
-      color: black;
+      color: rgb(255, 255, 255);
   }
   50% {
       color: cyan;
   }
   100% {
-      color: black;
+      color: rgb(255, 255, 255);
   }
 }
 
 .fade-black-cyan {
   animation: colorFade 3s infinite;
 }
+/* Key Framing Animations config */
