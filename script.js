@@ -1,26 +1,7 @@
     var selectedIcon = null
     var topIndex = 3
 
-    ////////////////MESSAGE BACKEND////////////////////////
-    var awaitingResponse = false
-    function sendMessage() {
-      if (!awaitingResponse) {
-        var messageContent = document.getElementById("messageInput").value
-        var paragraph = document.createElement('p');
-        paragraph.textContent = messageContent
-        var targetDiv = document.getElementById('chat');
-        paragraph.classList.add("my_message")
-        targetDiv.appendChild(paragraph);
-        awaitingResponse = true
-        sendSMS(messageContent)
-
-
-      }
-
-    }
-////////////////MESSAGE BACKEND////////////////////////
-
-
+  
 ////////////////MUSIC TOGGLE BACKEND////////////////////////
      function toggleMusic() {
       var video = document.getElementById("videoElement");
@@ -34,7 +15,7 @@
       } else {
         video.muted = true;
         video.style.display = "none";
-        musicToggle.textContent = "Play Music";
+        musicToggle.textContent = "Play Some Linkin Park?";
       }
     }
 ////////////////MUSIC TOGGLE BACKEND////////////////////////
@@ -190,9 +171,9 @@ function tapWindow(elmnt) {
             marker.addTo(map);
     
           }
-          createCustomMarker(34.9482, -81.9301, 'https://cloud-gelhtq1fq-hack-club-bot.vercel.app/0screenshot_2023-06-12_at_4.15.00_pm.png', 'Dieter, Parker, Tyler, and I organized Carolina Hacks, the first student-led Hackathon for high schoolers in South Carolina. We had a blast! <br/><br/>Checkout our <a href="https://drive.google.com/file/d/1gOpYcsQk7mf2ETHbtHarUdKUDJAMFL-w/view?usp=drive_link">Carolina Hacks Documentary</a>');
-          createCustomMarker(28.4595, 77.0266, 'https://cloud-6i5n6oo28-hack-club-bot.vercel.app/0screenshot_2023-06-13_at_10.33.44_am.png', 'Epoch was awesome! I met so many awesome people (including my team mates: Arpan and Vaishnavi). We built an AI-powered pickup line generator. <br/><br/>Epoch Documentary <a href="https://youtu.be/KLx4NZZPzMc">Epoch Documentary</a>');
-          createCustomMarker(42.3601, -71.0589, 'https://cloud-eakdz9j3y-hack-club-bot.vercel.app/0image.png', 'I really enjoyed Angel Hacks. At Angel Hacks, we built an AI college admissions simulator, funded by Elon Musk. It is free, but students give 10 % of lifetime income.It also costs the user $250, 000 for every student they accept <br/> <br/>Checkout the <a href="https://youtu.be/KLx4NZZPzMc"> Angel Hacks Documentary</a> ');
+          createCustomMarker(28.6139, 77.2090, '/assets/mapsme.gif', 'This is my hometown, Delhi, which is the capital of India! :D <br/><br/>Checkout my portfolio website <a href="https://aaryav.netlify.app">aaryav.netlify.app</a>');
+          createCustomMarker(28.4595, 77.0266, '');
+          createCustomMarker(42.3601, -71.0589, '');
     
           marker.addTo(map);
 /////////////////////////////MAP BACKEND//////////////////////////////////////////////////////  

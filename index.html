@@ -48,7 +48,7 @@
         style="pointer-events: auto; cursor: pointer; padding: 4px 12px; background-color: rgba(255, 255, 255, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.0); border: 1px solid transparent; transition: box-shadow 0.3s ease; border-radius: 16px;"
         id="musicToggle" onmouseover="this.style.boxShadow = 'inset 0 0 0 1px rgba(255, 255, 255, 0.5)'"
         onmouseout="this.style.boxShadow = 'none'">
-        Play Music
+        Play some Linkin Park?
       </p>
       <p id="time" style="margin-right: 16px; margin-left: 16px"></p>
     </div>
@@ -91,18 +91,17 @@
 
 <!--------Maps App------> 
   <div id="maps" onclick="tapWindow(document.getElementById('maps'))"
-    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; overflow: hidden; width: 750px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    style="align-items: center; border: 1px solid rgb(0, 225, 255); border-radius: 16px; background-color: #fff; overflow: hidden; width: 750px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="mapshandle"
-      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
       <div onclick="closeElement(document.getElementById('maps'))"
         style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
       </div>
-      <p>Maps</p>
+      <p style="color: white;">Maps</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
     </div>
     <div style="width: 100%; height: 400px;">
       <div id="map"></div>
-
     </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </div>
@@ -110,38 +109,37 @@
 
 <!--------Contact App------> 
   <div id="contact" onclick="tapWindow(document.getElementById('contact'))"
-    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    style="align-items: center; border: 1px solid rgb(0, 195, 255); border-radius: 16px; background-color: #414141; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="contacthandle"
-      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
       <div onclick="closeElement(document.getElementById('contact'))"
         style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
       </div>
-      <p>Message Thomas</p>
+      <p style="color: white;">AUTOMATED FORM SUBMISSION</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
     </div>
     <div style="width: calc(100% - 32px);">
       <div id="chat">
-        <p class="thomas_message">
-          Hey there, welcome to
-          my inbox.</p>
-        <img src="https://cloud-pc8imajxj-hack-club-bot.vercel.app/0img_0837.jpg"
-          style="width: 120px; border-radius: 16px" />
-        <p class="thomas_message">You can send texts here & they'll ping on my phone instantly</p>
-        <p class="thomas_message">Feel free to also send me an email at <a href="mailto: thomas@hackclub.com"
-            style="color: #CE41FF">thomas@hackclub.com</a> (for hack-club related
-          purposes) or
-          <a style="color: #CE41FF" href="mailto: thomas@serenidad.app">thomas@serenidad.app</a> (for all other
-          purposes)
+        <p class="aaryav_message">
+          Hey there!!</p>
+        <img src="assets/inbox.gif"
+          style="width: 200px; border-radius: 16px" />
+        <p class="aaryav_message">Your Responses will directly be sent to my mail.</p>
+        <p class="aaryav_message">You can also directly mail me at <a href="mailto: behlaaryav@gmail.com"
+            style="color: #1100ff">behlaaryav@gmail.com</a>.
         </p>
       </div>
       <div
         style="flex-direction: row; align-items: center; margin-bottom: 16px; justify-content: space-between; display: flex;">
-        <input type="text" id="messageInput" onchange="awaitingResponse = false"
-          style="padding: 6px 10px; width: calc(100%); border: 1px solid #ccc; border-radius: 4px; font-size: 14px; outline: none; vertical-align: middle;" />
+        
         <div
           style="display: flex; align-items: center; justify-content: center; font-size: 14px; margin-left: 16px; outline: none;">
-          <p style="margin: 0; cursor: pointer; color: #CE41FF" onclick="sendMessage()">Send</p>
-
+          <form action="https://formsubmit.co/behlaaryav@gmail.com" method="POST">
+            <input type="text" name="Name" placeholder="Full Name">
+            <input type="email" placeholder="Your Email">
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message" style="width: 400px; height: 100px;"></textarea>
+            <button class="buttonsend" type="submit">Send</button>
+       </form>
         </div>
       </div>
     </div>
@@ -385,13 +383,13 @@
 
 <!--------About me App------> 
   <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
-    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fbfbfb; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="aboutMehandle"
-      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+      style="display: flex; align-items: center; background-color: #2c2b2b; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
       <div onclick="closeElement(document.getElementById('aboutMe'))"
         style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
       </div>
-      <p>aboutMe.txt</p>
+      <p style="color: white">aboutMe.txt</p>
       <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
     </div>
     <div style="font-family: Courier; width: calc(100% - 32px);">
@@ -401,26 +399,21 @@
         </br>
         </br>
 
-        <img src="https://cloud-pc8imajxj-hack-club-bot.vercel.app/1img_1181.jpg"
+        <img src="assets/bio.gif"
           style="width: 120px; border-radius: 16px" />
         </br>
         </br>
-
-        I am a <span id="age"></span> year old hacker helping engineer software for Hack Club leaders & a creator of
-        many
-        side projects (many of which you'll find here).
+        I am Aaryav if you don't know already and I am <span id="age"></span> years old. I am an aspiring computer science student.
         </br>
         </br>
-        I've neglected creating a personal website because I've found them to be mundane and self-obsessed. I am now
-        meeting a lot of people, so I
-        developed Capybara OS to provide a snapshot of "Who Thomas Is" without feeling like an ad.
+        I have a passion for building things, whether software or hardware. I have been in this field for as long as I can remember and am well-versed in many aspects. My favorite projects are hardware projects because they involve physical building, which I enjoy. Additionally, I love using tools like a soldering iron, Dremel, etc. I have also built numerous digital programs in Python and created many open-source websites on my GitHub.
         </br>
         </br>
-        Explore the site to
-        get to know me a bit & let's chat
-        soon!
-
+        Occasionally, I upload my projects on my social media, so check there as well because I might be more active there. :)
       </p>
+      <a href="https://www.example.com">Link text</a>
+      <a href="https://www.example.com">Link text</a>
+      <a href="https://www.example.com">Link text</a>
     </div>
   </div>
 <!--------About me App------> 
@@ -462,10 +455,6 @@
 
   </div>
 <!--------Welcome Page------> 
-  <script>
-
-
-  </script>
   <script src="script.js"></script>
 </header>
 </body>
